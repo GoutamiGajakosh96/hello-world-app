@@ -12,7 +12,7 @@ jobs:
     - uses: actions/checkout@v2
 
     - name: Build Docker image
-      run: docker build -t nodejs-hw .
+      run: docker build -t gnv96/nodejs-hw:latest .
 
     - name: Push Docker image
       run: |
