@@ -12,9 +12,10 @@ jobs:
     - uses: actions/checkout@v2
 
     - name: Build Docker image
-      run: docker build -t gnv96/nodejs-hw:latest .
+      run: docker build -t nodejs-hw .
 
     - name: Push Docker image
       run: |
         docker login -u ${{ secrets.DOCKER_HUB_USERNAME }} -p ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
-        docker push your-docker-image
+        docker tag gnv96/nodejs-hw nodejs-hw
+        docker push gnv96/nodejs-hw
