@@ -17,5 +17,5 @@ jobs:
     - name: Push Docker image
       run: |
         docker login -u ${{ secrets.DOCKER_HUB_USERNAME }} -p ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
-        docker tag gnv96/nodejs-hw nodejs-hw
+        docker tag nodejs-hw gnv96/nodejs-hw
         docker push gnv96/nodejs-hw
